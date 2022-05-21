@@ -7,12 +7,12 @@
 #
 import math
 import os
-import click
 import random
 import sys
 from copy import copy
 from dataclasses import dataclass
 
+import click
 import matplotlib.pyplot as plt
 
 # size of one dimension (in meters)
@@ -153,9 +153,9 @@ def evaluation(robot: RobotState, particles: list[RobotState]) -> float:
     x, y = robot.point.x, robot.point.y
     for particle in particles:
         dx = (particle.point.x - x + (WORLD_SIZE / 2.)) % WORLD_SIZE - (
-                WORLD_SIZE / 2.)
+            WORLD_SIZE / 2.)
         dy = (particle.point.y - y + (WORLD_SIZE / 2.)) % WORLD_SIZE - (
-                WORLD_SIZE / 2.)
+            WORLD_SIZE / 2.)
         err = math.sqrt(dx ** 2 + dy ** 2)
         sum_ += err
 
