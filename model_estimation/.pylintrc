@@ -1,0 +1,12 @@
+[MASTER]
+disable=C0115, # missing-class-docstring
+        C0116, # missing-function-docstring
+        C0114, # missing-module-docstring
+        C0103, # invalid-name
+        R0903, # too-few-public-methods
+
+extension-pkg-whitelist=cv2
+generated-members=cv2.*
+
+[SIMILARITIES]
+ignore-imports=yes
