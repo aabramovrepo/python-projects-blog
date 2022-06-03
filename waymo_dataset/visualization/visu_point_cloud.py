@@ -64,6 +64,7 @@ def show_point_cloud(points: np.ndarray, laser_labels: Label) -> None:
 
     opt = vis.get_render_option()
     opt.background_color = np.asarray([0, 0, 0])
+    opt.point_size = 2.
 
     pcd = o3d.geometry.PointCloud()
     pcd.points = o3d.utility.Vector3dVector(points)
