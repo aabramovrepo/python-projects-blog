@@ -67,11 +67,8 @@ def show_point_cloud(points: np.ndarray, laser_labels: Label) -> None:
 
     pcd = o3d.geometry.PointCloud()
     pcd.points = o3d.utility.Vector3dVector(points)
-
     mesh_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(
         size=1.6, origin=[0, 0, 0])
-
-    pcd.points = o3d.utility.Vector3dVector(points)
 
     vis.add_geometry(pcd)
     vis.add_geometry(mesh_frame)
